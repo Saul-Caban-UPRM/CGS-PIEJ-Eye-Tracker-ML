@@ -1,0 +1,14 @@
+train: yolov8_training/images/train
+val: yolov8_training/images/val
+
+nc: 7
+names:
+  [
+    "calculator",
+    "greenfolder",
+    "pen",
+    "ruler",
+    "sunglasses",
+    "toy",
+    "whitebook",
+  ]
