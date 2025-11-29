@@ -1,4 +1,15 @@
 # utils/motion_analysis.py
+# - Purpose: simple frame-difference motion analyzer that computes a scaled motion score and
+#   classifies overall behavior as 'delicate', 'normal', or 'withoutcare'.
+# - Function: detect_motion(video_path)
+#   - video_path: path to input video file.
+#   - returns: one of 'delicate', 'normal', 'withoutcare'.
+# - Notes:
+#   - Uses OpenCV and numpy (pip install opencv-python numpy).
+#   - Heuristic: sums pixel-wise frame differences above a threshold and scales the result.
+#   - For robustness, consider adding handling for unreadable/empty videos and normalizing by frame count.
+# - Suggested improvements:
+#   - Return numeric motion score in addition to label, tune threshold/scale, or use optical flow for finer analysis.
 import cv2, numpy as np
 
 def detect_motion(video_path):

@@ -1,4 +1,13 @@
 # utils/video_to_frames.py
+# - Purpose: extract frames from a video file and save them as image files at a specified interval.
+# - Function: extract_frames(video_path, output_folder, frame_skip)
+#   - video_path: path to the input video file.
+#   - output_folder: directory where extracted frames will be saved (created if missing).
+#   - frame_skip: save every Nth frame (integer). e.g., frame_skip=30 saves one frame every 30 frames.
+# - Notes:
+#   - Uses OpenCV (pip install opencv-python).
+#   - The example call at the bottom runs on import; comment it out if you import this as a module.
+#   - Consider adjusting filename pattern or format if needed.
 import cv2
 import os
 
