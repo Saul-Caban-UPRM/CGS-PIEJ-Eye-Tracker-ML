@@ -23,4 +23,4 @@ def extract_frames(video_path, output_folder, frame_skip):
     print(f"✅ Extracted {saved_id} frames from {video_path}")
 
 # Example usage: extract 1 frame per second from a 30 fps video
-extract_frames("videos/recording.mp4", "yolov8_training/images/train", frame_skip=30)
+extract_frames("videos/video1.mp4", "ScreenShots/video1", frame_skip=5)
