@@ -27,11 +27,7 @@ Notes / Extensions
 """
 
 # Path to model weights (local override). If not found, falls back to the official small model.
-MODEL_PATH = Path("models/best.pt") # This should point to your custom trained model weights (currently not trained))
-if not MODEL_PATH.exists():
-    print(f"Model not found at: {MODEL_PATH.resolve()}")
-    print("Place your weights at that path, update MODEL_PATH, or allow fallback to the official pretrained model (will be downloaded).")
-    MODEL_PATH = "yolov8n.pt"  # fallback: official pretrained YOLOv8 small model
+MODEL_PATH = Path("yolov8_training/runs/detect/train/weights/best.pt") # This should point to your custom trained model weights (currently not trained))
 
 # instantiate model
 model = YOLO(str(MODEL_PATH))
@@ -70,6 +66,7 @@ def analyze(video_path, frame_step: int = 30, conf_threshold: float = 0.5):
     Returns
     -------
     None (prints summary). You can change it to return a dict for programmatic use.
+
     """
     cap = cv2.VideoCapture(str(video_path))
     if not cap.isOpened():

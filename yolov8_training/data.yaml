@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../train/images
+test: ../test/images
+
+nc: 1
+names: ["pen"]
+
+roboflow:
+  workspace: researchpiejyololabeling
+  project: my-first-project-l7rob
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/researchpiejyololabeling/my-first-project-l7rob/dataset/2
